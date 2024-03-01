@@ -49,7 +49,7 @@
     * Seasonality
     * Seasonal decomposition
 * Threshold anomaly detection
-* Interquantile Range (IQR) anomaly detection
+* Interquartile Range (IQR) anomaly detection
 * Seasonal decomposition anomaly detection
 * ARIMA, Auto ARIMA
 * (Extra machine learning examples)
@@ -57,7 +57,7 @@
 ### Week 6: MLOps
 * Web service basics
 * REST APIs
-* Microservies architecture
+* Microservices architecture
 * Docker 
 * MLFlow
 * Overall software architecture
