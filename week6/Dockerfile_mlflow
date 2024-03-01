@@ -1,0 +1,14 @@
+# Use the official Python image as the base image
+FROM python:3.11.5
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install MLflow and other dependencies
+RUN pip install mlflow
+
+# Expose the MLflow UI port
+EXPOSE 5000
+
+# Start MLflow UI when the container launches
+CMD mlflow ui --host 0.0.0.0

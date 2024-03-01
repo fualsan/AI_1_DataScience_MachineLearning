@@ -1,0 +1,30 @@
+version: '3.11.5'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile_fastapi   # FastAPI hizmeti için Dockerfile
+    ports:
+      - "8000:8000" 
+    depends_on:
+      - mlflow
+    restart: always
+    networks:
+      - mlflow_network
+    
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile_mlflow   # MLflow hizmeti için Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    restart: always
+    networks:
+      - mlflow_network
+
+networks:
+  mlflow_network:
+    driver: bridge
